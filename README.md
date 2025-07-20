@@ -1,4 +1,4 @@
-![Anika Logo](assets/logo-anika.png)
+<img src="assets/logo-anika.png" alt="Anika Logo" width="256" />
 
 # Anika
 
