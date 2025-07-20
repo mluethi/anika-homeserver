@@ -1,0 +1,22 @@
+name: 🔧 Validate Anika Setup
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-syntax:
+    name: Check Docker Compose Syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: 🔍 Install Docker Compose
+        run: sudo apt-get update && sudo apt-get install -y docker-compose
+
+      - name: ✅ Validate Compose Files
+        run: |
+          find apps/ infra/ -name "docker-compose.yml" -exec docker-compose -f {} config \;

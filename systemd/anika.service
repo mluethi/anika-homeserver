@@ -1,0 +1,14 @@
+[Unit]
+Description=Anika Homelab Services
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/local/bin/anika
+ExecStop=/usr/bin/docker stop $(docker ps -q --filter label=anika)
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+*.log
+*.zip
+.env
+__pycache__/
+*.pyc
+*.swp
+*.bak
+*.DS_Store
+scripts/status.json

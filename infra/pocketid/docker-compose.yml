@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    image: placeholder/image
+    container_name: placeholder
+    ports:
+      - "8080:80"
+    restart: unless-stopped
