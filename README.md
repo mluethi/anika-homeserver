@@ -1,17 +1,20 @@
-# Anika 🧠🖥️
+<img src="assets/logo-anika.png" alt="Anika Logo" width="256" />
 
-Anika ist ein modular aufgebautes, containerbasiertes HomeLab-System mit Single-Sign-On (SSO), zentraler Steuerung und integriertem Systemmonitoring – entwickelt für Selbsthoster und HomeLab-Enthusiasten.
+# Anika
+
+Anika is a modular, container-based HomeLab system with single sign-on (SSO), centralized control, and integrated system monitoring — designed for self-hosters and HomeLab enthusiasts.
 
 ## 🌟 Features
-- Modularer Aufbau mit Docker Compose
-- Dienste wie Gitea, Wiki.js, VS Code Server, Cockpit, Dashy, Syncthing u. a.
-- Caddy als Reverse Proxy mit automatischem HTTPS (Let's Encrypt)
-- Pocket ID für zentrale Authentifizierung (SSO)
-- Dashy als Web-Dashboard mit direkter Steuerung der Dienste
-- Systemüberwachung (Uptime, CPU, Speicher, Temperatur)
-- Terminal-TUI zur Steuerung aller Dienste (`anika`)
 
-## 🚀 Erste Schritte
+- Modular structure using Docker Compose
+- Includes services like Gitea, Wiki.js, VS Code Server, Cockpit, Dashy, Syncthing, and more
+- Caddy as reverse proxy with automatic HTTPS (Let's Encrypt)
+- Pocket ID for centralized authentication (SSO)
+- Dashy as web dashboard with control over all services
+- System monitoring (uptime, CPU, memory, temperature, etc.)
+- Terminal TUI for managing all services (`anika` command)
+
+## 🚀 Getting Started
 
 ```bash
 chmod +x install.sh install-tui.sh
@@ -20,4 +23,4 @@ sudo ./install.sh
 ```
 
 ## 🛡 Lizenz
-Apache 2.0 – siehe [LICENSE](LICENSE)
+Apache 2.0 – see [LICENSE](LICENSE)
