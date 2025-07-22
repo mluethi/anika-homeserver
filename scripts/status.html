@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anika System Info</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 1em; color: #333; }
+    .label { font-weight: bold; margin-right: 0.5em; }
+    .item { margin-bottom: 0.5em; }
+  </style>
+</head>
+<body>
+  <h2>Systemstatus – Anika</h2>
+  <div class="item"><span class="label">Zeit:</span><span id="time">–</span></div>
+  <div class="item"><span class="label">Uptime:</span><span id="uptime">–</span></div>
+  <div class="item"><span class="label">IP-Adresse:</span><span id="ip">–</span></div>
+  <div class="item"><span class="label">CPU Last:</span><span id="cpu">–</span></div>
+  <div class="item"><span class="label">Speicher:</span><span id="mem">–</span></div>
+  <div class="item"><span class="label">Festplatte:</span><span id="disk">–</span></div>
+  <div class="item"><span class="label">CPU Temperatur:</span><span id="temp">–</span></div>
+
+<script>
+async function getInfo() {
+  const res = await fetch('status.json');
+  const data = await res.json();
+  document.getElementById('time').textContent = data.time;
+  document.getElementById('uptime').textContent = data.uptime;
+  document.getElementById('ip').textContent = data.ip;
+  document.getElementById('cpu').textContent = data.cpu;
+  document.getElementById('mem').textContent = data.mem;
+  document.getElementById('disk').textContent = data.disk;
+  document.getElementById('temp').textContent = data.temp;
+}
+getInfo();
+setInterval(getInfo, 5000);
+</script>
+</body>
+</html>
